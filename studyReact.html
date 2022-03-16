@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 加载 React。-->
+    <!-- 注意: 部署时，将 "development.js" 替换为 "production.min.js"。-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+</body>
+<script type="text/babel">
+    class Demo extends React.Component {
+        constructor(props) {
+            super(props);
+            console.log('child-constructor')
+        }
+
+        state = {
+            count: 0
+        }
+
+        add = () => {
+            const {count} = this.state;
+            this.setState({
+                count: count + 1
+            })
+        }
+        destroy = () => {
+            ReactDOM.unmountComponentAtNode(document.getElementById('app'));
+        }
+
+        force = () => {
+            this.forceUpdate();
+        }
+
+        componentWillMount() {
+            console.log('child-componentWillMount')
+        }
+
+        componentDidMount() {
+            console.log('child-componentDidMount')
+        }
+
+        componentWillUnmount() {
+            console.log('child-componentWillUnmount')
+        }
+
+        shouldComponentUpdate() {
+            console.log('shouldComponentUpdate')
+            return true;
+        }
+
+        componentWillUpdate() {
+            console.log('componentWillUpdate')
+        }
+
+        componentDidUpdate() {
+            console.log('componentDidUpdate')
+        }
+
+        render() {
+            console.log('child-render')
+            const {count} = this.state
+            return (
+                <div>
+                    <h1>生命周期{count}</h1>
+                    <button onClick={this.add}>计数加一</button>
+                    <button onClick={this.destroy}>销毁</button>
+                    <button onClick={this.force}>强制更新</button>
+                </div>
+            );
+        }
+    }
+
+    class A extends React.Component {
+        state = {
+            carName: "奔驰"
+        }
+        changeCar = () => {
+            this.setState({
+                carName: "宝马"
+            })
+        }
+
+        render() {
+            return (
+                <div>
+                    <h1>A</h1>
+                    <button onClick={this.changeCar}>换车</button>
+                    <B carName={this.state.carName}/>
+                </div>
+            )
+        }
+    }
+
+    class B extends React.Component {
+        componentWillMount() {
+            console.log('child-componentWillMount')
+        }
+
+        componentDidMount() {
+            console.log('child-componentDidMount')
+        }
+
+        componentWillUnmount() {
+            console.log('child-componentWillUnmount')
+        }
+
+
+        componentWillUpdate() {
+            console.log('componentWillUpdate')
+        }
+
+        componentDidUpdate() {
+            console.log('componentDidUpdate')
+        }
+
+        //组件将要接受新的props的钩子
+        componentWillReceiveProps(nextProps) {
+            console.log('B-componentWillReceiveProps', nextProps)
+        }
+
+        shouldComponentUpdate(nextProps, nextState) {
+            console.log('B-shouldComponentUpdate', nextProps, nextState)
+            return true;
+        }
+
+        render() {
+            console.log('B-render')
+            return (
+                <div>
+                    <h1>B组件，接收到的车是->{this.props.carName}</h1>
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(
+        <Demo/>,
+        document.getElementById('app')
+    );
+</script>
+</html>
