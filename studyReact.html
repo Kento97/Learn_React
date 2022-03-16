@@ -40,7 +40,7 @@
             this.forceUpdate();
         }
 
-        componentWillMount() {
+        UNSAFE_componentWillMount() {
             console.log('child-componentWillMount')
         }
 
@@ -57,7 +57,7 @@
             return true;
         }
 
-        componentWillUpdate() {
+        UNSAFE_componentWillUpdate() {
             console.log('componentWillUpdate')
         }
 
@@ -123,7 +123,7 @@
         }
 
         //组件将要接受新的props的钩子
-        componentWillReceiveProps(nextProps) {
+        UNSAFE_componentWillReceiveProps(nextProps) {
             console.log('B-componentWillReceiveProps', nextProps)
         }
 
@@ -141,6 +141,8 @@
             )
         }
     }
+
+
 
     ReactDOM.render(
         <Demo/>,
