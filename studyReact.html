@@ -12,6 +12,18 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <title>Document</title>
 </head>
+<style>
+    .list {
+        width: 200px;
+        height: 150px;
+        background-color: #ccc;
+        overflow: auto;
+    }
+
+    .news {
+        height: 30px;
+    }
+</style>
 <body>
 <div id="app"></div>
 </body>
@@ -40,8 +52,14 @@
             this.forceUpdate();
         }
 
-        UNSAFE_componentWillMount() {
-            console.log('child-componentWillMount')
+        static getDerivedStateFromProps(nextProps, prevState) {
+            console.log('getDerivedStateFromProps', nextProps, prevState)
+            return null;
+        }
+
+        getSnapshotBeforeUpdate(prevProps, prevState) {
+            console.log('getSnapshotBeforeUpdate', prevProps, prevState)
+            return null;
         }
 
         componentDidMount() {
@@ -57,12 +75,8 @@
             return true;
         }
 
-        UNSAFE_componentWillUpdate() {
-            console.log('componentWillUpdate')
-        }
-
-        componentDidUpdate() {
-            console.log('componentDidUpdate')
+        componentDidUpdate(prevProps, prevState, snapShot) {
+            console.log('componentDidUpdate', prevProps, prevState, snapShot)
         }
 
         render() {
@@ -79,73 +93,44 @@
         }
     }
 
-    class A extends React.Component {
-        state = {
-            carName: "奔驰"
-        }
-        changeCar = () => {
-            this.setState({
-                carName: "宝马"
-            })
-        }
+    class NewsList extends React.Component {
 
-        render() {
-            return (
-                <div>
-                    <h1>A</h1>
-                    <button onClick={this.changeCar}>换车</button>
-                    <B carName={this.state.carName}/>
-                </div>
-            )
-        }
-    }
-
-    class B extends React.Component {
-        componentWillMount() {
-            console.log('child-componentWillMount')
-        }
+        state = {newsArr: []}
 
         componentDidMount() {
-            console.log('child-componentDidMount')
+            setInterval(() => {
+                const {newsArr} = this.state;
+                const news = `news${newsArr.length + 1}`;
+                this.setState({
+                    newsArr: [news, ...newsArr]
+                })
+            }, 1000)
         }
 
-        componentWillUnmount() {
-            console.log('child-componentWillUnmount')
+        getSnapshotBeforeUpdate() {
+            return this.refs.list.scrollHeight;
         }
 
-
-        componentWillUpdate() {
-            console.log('componentWillUpdate')
-        }
-
-        componentDidUpdate() {
-            console.log('componentDidUpdate')
-        }
-
-        //组件将要接受新的props的钩子
-        UNSAFE_componentWillReceiveProps(nextProps) {
-            console.log('B-componentWillReceiveProps', nextProps)
-        }
-
-        shouldComponentUpdate(nextProps, nextState) {
-            console.log('B-shouldComponentUpdate', nextProps, nextState)
-            return true;
+        componentDidUpdate(_, __, snapShot) {
+            this.refs.list.scrollTop += this.refs.list.scrollHeight - snapShot;
         }
 
         render() {
-            console.log('B-render')
             return (
-                <div>
-                    <h1>B组件，接收到的车是->{this.props.carName}</h1>
+                <div className="list" ref='list'>
+                    {
+                        this.state.newsArr.map((news, index) => {
+                            return <div className="news" key={index}>{news}</div>
+                        })
+                    }
                 </div>
             )
         }
+
     }
 
-
-
     ReactDOM.render(
-        <Demo/>,
+        <NewsList/>,
         document.getElementById('app')
     );
 </script>
