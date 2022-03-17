@@ -98,7 +98,7 @@
         state = {newsArr: []}
 
         componentDidMount() {
-            setInterval(() => {
+            this.timer=setInterval(() => {
                 const {newsArr} = this.state;
                 const news = `news${newsArr.length + 1}`;
                 this.setState({
@@ -113,6 +113,7 @@
 
         componentDidUpdate(_, __, snapShot) {
             this.refs.list.scrollTop += this.refs.list.scrollHeight - snapShot;
+            this.state.newsArr.length>=10 && clearInterval(this.timer);
         }
 
         render() {
