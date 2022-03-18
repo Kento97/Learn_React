@@ -2,6 +2,10 @@ import {useState} from 'react'
 import './App.css'
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
+import Router from "./router/index.jsx";
+import {Outlet} from "react-router-dom";
+
+
 
 
 function App() {
@@ -9,8 +13,7 @@ function App() {
 
     return (
         <div className="App">
-            <Home/><hr/>
-            <About/>
+            <Outlet/>
         </div>
     )
 }
