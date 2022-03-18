@@ -3,7 +3,8 @@ import store from "../store";
 import {ADD_NUMBER} from "../store/actionCreators";
 
 const Home = () => {
-    const [state, setState] = useState({counter: store.getState().counter})
+    const storeData = {counter: store.getState().counter}
+    const [state, setState] = useState(storeData)
     useEffect(() => {
         store.subscribe(() => {
             setState({
