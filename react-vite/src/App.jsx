@@ -3,7 +3,7 @@ import './App.css'
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Router from "./router/index.jsx";
-import {Outlet} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 import Index from "../src/pages/router-demo/Index";
 
@@ -12,8 +12,22 @@ function App() {
     const [count, setCount] = useState(0)
 
     return (
-        <div className="App">
-            <Index/>
+        <div className="App"
+             style={{fontSize: "40px", fontFamily: "JetBrains Mono", display: "flex", flexDirection: "column"}}>
+            <Link to="/home">App</Link>
+            <Link to="/detail">detail</Link>
+            <Link to="/list">list</Link>
+            <Link to="/error">404</Link>
+            <div style={{
+                borderRadius: "10px",
+                height: "100px",
+                lineHeight: "100px",
+                textAlign: "center",
+                background:"darkgrey"
+            }}>
+                <Outlet/>
+            </div>
+
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import App from "../pages/router-demo/Index";
+import App from "../App.jsx"
 import List from "../pages/router-demo/List";
 import Detail from "../pages/router-demo/Detail";
 import Home from "../pages/router-demo/Home";

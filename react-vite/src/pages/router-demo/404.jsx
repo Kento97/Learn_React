@@ -1,11 +1,11 @@
 import {useState} from 'react';
 
 
-const NoMatch=() => {
+const NoMatch = () => {
 
     return (
         <>
-            <div>404</div>
+            <div style={{fontSize: "40px", fontFamily: "JetBrains Mono"}}>404</div>
         </>
     );
 

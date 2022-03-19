@@ -10,8 +10,7 @@ const Index = () => {
 
     return (
         <>
-            <Link to="/home">App</Link>
-            <Outlet/>
+
         </>
     );
 
