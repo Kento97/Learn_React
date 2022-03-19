@@ -1,10 +1,6 @@
 import React, {useState} from 'react'
 import './App.css'
-import Home from "./pages/home.jsx";
-import About from "./pages/about.jsx";
-import Router from "./router/index.jsx";
-import {Link, Outlet, useLocation, useNavigate} from "react-router-dom";
-import Index from "../src/pages/router-demo/Index";
+import {Link, Outlet, useNavigate} from "react-router-dom";
 
 
 function App() {

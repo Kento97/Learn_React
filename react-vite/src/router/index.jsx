@@ -1,11 +1,10 @@
-import {useState} from 'react';
 import App from "../App.jsx"
 import List from "../pages/router-demo/List";
 import Detail from "../pages/router-demo/Detail";
 import Home from "../pages/router-demo/Home";
 import NoMatch from "../pages/router-demo/404";
 
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 const myRouter = () => {
     return (
