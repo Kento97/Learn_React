@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 import './App.css'
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Router from "./router/index.jsx";
 import {Outlet} from "react-router-dom";
 
-
+import Index from "../src/pages/router-demo/Index";
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
     return (
         <div className="App">
-            <Outlet/>
+            <Index/>
         </div>
     )
 }
