@@ -1,16 +1,16 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import './App.css'
-import {useNavigate,Routes} from "react-router-dom";
+import {useNavigate, Routes} from "react-router-dom";
+import Hooks from "@/learn-hooks/hooks";
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-
-    </div>
-  )
+    return (
+        <div className="App">
+            <Hooks/>
+        </div>
+    )
 }
 
 export default App
