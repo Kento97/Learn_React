@@ -1,31 +1,12 @@
 import {useState, useEffect, useRef} from 'react';
-
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 const Hooks = () => {
-    const [value, setValue] = useState<number>(0)
-    const [timers, setTimers] = useState<Array<NodeJS.Timeout>>([]);
-    const saveCallBack: any = useRef();
-    const callBack = () => {
-        const random: number = (Math.random() * 10) | 0;
-        setValue(value + random);
-    };
-    useEffect(() => {
-        saveCallBack.current = callBack;
-        return () => {};
-    })
-    useEffect(() => {
-        const tick = () => {
-            saveCallBack.current();
-        };
-        const timer: NodeJS.Timeout = setInterval(tick, 5000);
-        timers.push(timer);
-        setTimers(timers);
-        console.log(timers);
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
-    return <div>{value}</div>;
+    const [message, setMessage] = useLocalStorage('hook-key', {a: 1, b: 3});
+    setTimeout(() => {
+        setMessage({a: 0, b: 2});
+    }, 5000)
+    return <div>{JSON.stringify(message)}</div>
 }
 
 export default Hooks;
