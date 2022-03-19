@@ -3,14 +3,15 @@ import './App.css'
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Router from "./router/index.jsx";
-import {Link, Outlet} from "react-router-dom";
-
+import {Link, Outlet, useLocation} from "react-router-dom";
 import Index from "../src/pages/router-demo/Index";
+
 
 
 function App() {
     const [count, setCount] = useState(0)
-
+    const location = useLocation()
+    console.log(location.pathname,"location")
     return (
         <div className="App"
              style={{fontSize: "40px", fontFamily: "JetBrains Mono", display: "flex", flexDirection: "column"}}>
@@ -23,7 +24,7 @@ function App() {
                 height: "100px",
                 lineHeight: "100px",
                 textAlign: "center",
-                background:"darkgrey"
+                background: "darkgrey"
             }}>
                 <Outlet/>
             </div>
