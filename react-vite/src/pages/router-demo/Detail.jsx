@@ -8,7 +8,7 @@ const Detail = () => {
     const state = location.state
     return (
         <>
-            <div>详情-{state && state.name || ""}</div>
+            <div>详情-{state && state.name || "暂无"}</div>
         </>
     );
 
