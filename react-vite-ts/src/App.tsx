@@ -1,14 +1,14 @@
 import {useState} from 'react'
 import './App.css'
 import {useNavigate, Routes} from "react-router-dom";
-import Hooks from "@/learn-hooks/hooks";
+import MutateArray from "@/learn-hooks/MutateArray";
 
 
 function App() {
 
     return (
         <div className="App">
-            <Hooks/>
+            <MutateArray/>
         </div>
     )
 }
