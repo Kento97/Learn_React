@@ -9,5 +9,8 @@ export default defineConfig({
             "@": resolve(__dirname, 'src'), // 路径别名
         },
         extensions: ['.js', '.json', '.ts', '.jsx', '.tsx'], // 使用路径别名时想要省略的后缀名，可以自己 增减
+    },
+    server: {
+        open: true
     }
 })
