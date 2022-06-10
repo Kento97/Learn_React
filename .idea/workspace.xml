@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8bd8ebc-8aa1-4b15-be8b-821b0addc2a1" name="变更" comment="移除文件">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.umirc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProductList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/useProductList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/products.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/products.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/product.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings.d.ts" afterDir="false" />
+    <list default="true" id="c8bd8ebc-8aa1-4b15-be8b-821b0addc2a1" name="变更" comment="umi">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.umirc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/counter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/useProductList.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/products.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/products.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/product.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typings.d.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +60,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "D:\\Workspace\\Learn_React\\node_modules\\prettier",
@@ -96,7 +113,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654847672506</updated>
-      <workItem from="1654847673835" duration="5384000" />
+      <workItem from="1654847673835" duration="5748000" />
+      <workItem from="1654854234880" duration="6706000" />
     </task>
     <task id="LOCAL-00001" summary="移除文件">
       <created>1654847711100</created>
@@ -105,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654847711100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="umi">
+      <created>1654853863627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654853863627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="移除文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="移除文件" />
+    <MESSAGE value="umi" />
+    <option name="LAST_COMMIT_MESSAGE" value="umi" />
   </component>
 </project>

@@ -1,0 +1,6 @@
+@import '~antd/dist/antd.css';
+.container{
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
