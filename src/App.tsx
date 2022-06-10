@@ -5,12 +5,16 @@ import counterStore from "./store/counter";
 import {observer} from 'mobx-react-lite'
 
 const App: FC = () => {
-
+    const {filterList, addCount, reset, count} = counterStore
     return (
         <div className='container'>
-            <Button type={'ghost'} onClick={counterStore.addCount}>
-                {counterStore.count}
+            {filterList.join("-")}
+            <br/>
+            <Button type={'primary'} onClick={addCount}>
+                {count}
             </Button>
+            <br/>
+            <Button type={"dashed"} onClick={reset}>Reset</Button>
         </div>
     )
 };
