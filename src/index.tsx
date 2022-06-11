@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import 'antd/dist/antd.min.css';
+import "./index.scss"
 
-document.title = "demo"
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
