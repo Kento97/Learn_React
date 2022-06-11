@@ -3,7 +3,7 @@ import {computed, makeAutoObservable} from "mobx";
 class CounterStore {
     //定义数据
     count = 0;
-    list = [1, 2, 3, 4, 5]
+    private list = [1, 2, 3, 4, 5]
 
     constructor() {
         makeAutoObservable(this, {
@@ -22,6 +22,5 @@ class CounterStore {
     reset = () => this.count = 0;
 }
 
-const counterStore = new CounterStore()
 
-export default counterStore
+export default CounterStore

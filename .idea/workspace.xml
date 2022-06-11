@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8bd8ebc-8aa1-4b15-be8b-821b0addc2a1" name="变更" comment="新增mobx">
+    <list default="true" id="c8bd8ebc-8aa1-4b15-be8b-821b0addc2a1" name="变更" comment="mobx 初体验">
+      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/list.Store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/counter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/counter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/counter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/counter.Store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -84,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654847672506</updated>
       <workItem from="1654847673835" duration="5748000" />
-      <workItem from="1654854234880" duration="9511000" />
+      <workItem from="1654854234880" duration="13282000" />
     </task>
     <task id="LOCAL-00001" summary="移除文件">
       <created>1654847711100</created>
@@ -107,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654862936179</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mobx 初体验">
+      <created>1654865570497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654865570497</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +145,7 @@
     <MESSAGE value="移除文件" />
     <MESSAGE value="umi" />
     <MESSAGE value="新增mobx" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增mobx" />
+    <MESSAGE value="mobx 初体验" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobx 初体验" />
   </component>
 </project>

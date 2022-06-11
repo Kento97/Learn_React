@@ -1,11 +1,12 @@
-import React, {FC, useEffect} from 'react';
-import {Button, Input, Space} from 'antd';
+import React, {FC} from 'react';
+import {Button} from 'antd';
 import './App.css';
-import counterStore from "./store/counter";
 import {observer} from 'mobx-react-lite'
+import useStore from "./store";
 
 const App: FC = () => {
-    const {filterList, addCount, reset, count} = counterStore
+    const {counterStore: {count, filterList, addCount, reset}, listStore: {list, addList, resetList}} = useStore()
+
     return (
         <div className='container'>
             {filterList.join("-")}
@@ -15,6 +16,12 @@ const App: FC = () => {
             </Button>
             <br/>
             <Button type={"dashed"} onClick={reset}>Reset</Button>
+            <br/>
+            {list.join("-")}
+            <br/>
+            <Button type={"primary"} onClick={addList}>pushList</Button>
+            <br/>
+            <Button type={"dashed"} onClick={resetList}>resetList</Button>
         </div>
     )
 };
